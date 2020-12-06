@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author andrii
  */
 public class PrefixMatches {
-    private final int MIN_PREF_LEN = 3;
-    private Trie trie;
+    private final static int MIN_PREF_LEN = 3;
+    private final Trie trie;
 
     public PrefixMatches(Trie trie) {
         this.trie = trie;

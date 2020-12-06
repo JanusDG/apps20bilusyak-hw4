@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class RWayTrie implements Trie {
     private static final int alphaLen = 26;
     private final Node root;
-    private final char FIRST_CH_IN_ALPHA = 'a';
+    private final static char FIRST_CH_IN_ALPHA = 'a';
     private int wordCounter = 0;
 
     public RWayTrie(){
@@ -43,24 +43,6 @@ public class RWayTrie implements Trie {
             rez.append(node.val);
         }
         return rez.toString();
-    }
-
-    private Node[] extendNodeArr(Node... con){
-        Node[] newContainer = new Node[con.length + 1];
-        int i = 0;
-        for (; i < con.length - 1; i++){
-            newContainer[i] = con[i];
-        }
-        return newContainer;
-    }
-
-    private String[] extendStringArr(String... con){
-        String[] newContainer = new String[con.length + 1];
-        int i = 0;
-        for (; i < con.length - 1; i++){
-            newContainer[i] = con[i];
-        }
-        return newContainer;
     }
 
     public LinkedList<String> allWords(){
