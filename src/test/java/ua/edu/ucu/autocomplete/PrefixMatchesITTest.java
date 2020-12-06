@@ -54,12 +54,10 @@ public class PrefixMatchesITTest {
 
     @Test
     public void testContains() {
-        assertTrue(pm.contains("abc"));
+        assertTrue(pm.contains(" abc"));
         assertFalse(pm.contains("hello"));
         pm.delete("abc");
         assertFalse(pm.contains("abc"));
-
-
     }
 
 }
